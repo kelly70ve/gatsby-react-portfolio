@@ -35,10 +35,10 @@
 		border2-bg:			#e7e7e7,
 
 		accent1: (
-			bg:				#49bf9d,
-			fg:				mix(#49bf9d, #ffffff, 25%),
+			bg:				#0F4C81,
+			fg:				mix(#0F4C81, #ffffff, 25%),
 			fg-bold:		#ffffff,
-			fg-light:		mix(#49bf9d, #ffffff, 40%),
+			fg-light:		mix(#0F4C81, #ffffff, 40%),
 			border:			rgba(255,255,255,0.25),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(255,255,255,0.5),
@@ -46,10 +46,11 @@
 		),
 
 		accent2: (
-			bg:				#1f1815,
-			fg:				rgba(255,255,255,0.5),
-			fg-bold:		#ffffff,
-			fg-light:		rgba(255,255,255,0.4),
+			bg:				#E1B0A8,
+			fg:				#454545,
+			fg-bold:		#2E2E2E,
+			fg-light:		#454545,
+			header-hover: 	#FFFFFF,
 			border:			rgba(255,255,255,0.25),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(255,255,255,0.5),

@@ -902,11 +902,11 @@
 		@include vendor('align-items', 'flex-end');
 		@include vendor('justify-content', 'space-between');
 		background-color:		_palette(accent2, bg);
-		background-attachment:	scroll,								fixed;
-		background-image:		url('images/overlay.png'),			url('../images/bg.jpg');
-		background-position:	top left,							top left;
-		background-repeat:		repeat,								no-repeat;
-		background-size:		auto,								auto;
+		// background-attachment:	scroll,								fixed;
+		// background-image:		url('images/overlay.png'),			url('../images/bg.png');
+		// background-position:	top left,							top left;
+		// background-repeat:		repeat,								no-repeat;
+		// background-size:		auto,								auto;
 		color: _palette(accent2, fg);
 		height: 100%;
 		left: 0;
@@ -943,7 +943,11 @@
 
 		.image.avatar {
 			margin: 0 0 (_size(element-margin) * 0.5) 0;
-			width: 6.25em;
+			width: 8em;
+		}
+
+		a:hover {
+			color: _palette(accent2, header-hover)!important;
 		}
 	}
 
