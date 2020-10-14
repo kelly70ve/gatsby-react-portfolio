@@ -19,30 +19,23 @@ const HomeIndex = () => {
         <section id="one">
           <header className="major">
             <h2>
-              Ipsum lorem dolor aliquam ante commodo
-              <br />
-              magna sed accumsan arcu neque.
+            Hi, I'm Kelly Gowing & I'm a front end web-developer
             </h2>
           </header>
           <p>
-            Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc
-            nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae
-            lobortis tortor primis integer massa adipiscing id nisi accumsan
-            pellentesque commodo blandit enim arcu non at amet id arcu magna.
-            Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate
-            lorem neque cubilia.
+          2020 UCSD Full-Stack Web Development Bootcamp alumni and 2019 SDSU Marketing graduate. In December of 2019, I made the decision to make a major career change from Event Planning to Full Stack Web Development. My dream is to be a UI/UX developer or Product Manager, where I can utilize my skills in business, design, and development.
           </p>
           <ul className="actions">
             <li>
               <a href="#" className="button">
-                Learn More
+                Let's Work Together!
               </a>
             </li>
           </ul>
         </section>
 
         <section id="two">
-          <h2>Recent Work</h2>
+          <h2>Portfolio</h2>
 
           <Gallery />
 
@@ -104,23 +97,19 @@ const HomeIndex = () => {
                   <h3 className="icon fa-home">
                     <span className="label">Address</span>
                   </h3>
-                  1234 Somewhere Rd.
-                  <br />
-                  Nashville, TN 00000
-                  <br />
-                  United States
+                  San Diego, CA
                 </li>
                 <li>
                   <h3 className="icon fa-mobile">
                     <span className="label">Phone</span>
                   </h3>
-                  000-000-0000
+                  <a href="tel:619-655-6803">(619)-655-6803</a>
                 </li>
                 <li>
                   <h3 className="icon fa-envelope-o">
                     <span className="label">Email</span>
                   </h3>
-                  <a href="#">hello@untitled.tld</a>
+                  <a href="mailto:kelly.a.gowing@gmail.com">kelly.a.gowing@gmail.com</a>
                 </li>
               </ul>
             </div>
