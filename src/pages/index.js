@@ -27,7 +27,7 @@ const HomeIndex = () => {
           </p>
           <ul className="actions">
             <li>
-              <a href="#" className="button">
+              <a href="#worktogether" className="button">
                 Let's Work Together!
               </a>
             </li>
@@ -48,13 +48,8 @@ const HomeIndex = () => {
           </ul>
         </section>
 
-        <section id="three">
-          <h2>Get In Touch</h2>
-          <p>
-            Accumsan pellentesque commodo blandit enim arcu non at amet id arcu
-            magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem
-            vulputate lorem neque lorem ipsum dolor.
-          </p>
+        <section id="worktogether">
+          <h2>Contact Me</h2>
           <div className="row">
             <div className="8u 12u$(small)">
               <form method="post" action="#">
