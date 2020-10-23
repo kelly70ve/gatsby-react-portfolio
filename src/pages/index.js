@@ -23,7 +23,7 @@ const HomeIndex = () => {
             </h2>
           </header>
           <p>
-          2020 UCSD Full-Stack Web Development Bootcamp alumni and 2019 SDSU Marketing graduate. In December of 2019, I made the decision to make a major career change from Event Planning to Full Stack Web Development. My dream is to be a UI/UX developer or Product Manager, where I can utilize my skills in business, design, and development.
+          2020 UCSD Full-Stack Web Development Bootcamp alumni and 2019 SDSU Marketing graduate. In December of 2019, I decided to make a major career change from Event Planning to Full Stack Web Development. My dream is to be a UI/UX developer or Product Manager, where I will utilize my skills in business, design, and development.
           </p>
           <ul className="actions">
             <li>
