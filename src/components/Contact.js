@@ -1,12 +1,38 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { db } from './firebase'
 
 const Contact = () => {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    db.collection('contacts').add({
+      name: name,
+      email: email,
+      message: message
+    })
+    .then(() => {
+      alert('Message has been submitted')
+    })
+    .catch((error) => {
+      alert(error.message)
+      alert('Something went wrong, please try again')
+    })
+
+    setName("")
+    setEmail("")
+    setMessage("")
+  }
+
   return (
     <section id="worktogether">
       <h2>Contact Me</h2>
       <div className="row">
         <div className="8u 12u$(small)">
-          <form method="post" action="#">
+          <form method="post" action="#" className="form" onSubmit={handleSubmit}>
             <div className="row uniform 50%">
               <div className="6u 12u$(xsmall)">
                 <input
@@ -14,6 +40,8 @@ const Contact = () => {
                   name="name"
                   id="name"
                   placeholder="Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
               <div className="6u 12u$(xsmall)">
@@ -22,6 +50,8 @@ const Contact = () => {
                   name="email"
                   id="email"
                   placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="12u">
@@ -30,6 +60,8 @@ const Contact = () => {
                   id="message"
                   placeholder="Message"
                   rows="4"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
               </div>
             </div>
