@@ -5,6 +5,61 @@ import GalleryItem from './GalleryItem'
 import { DEFAULT_IMAGES } from '../constants/defaultImages'
 import { StaticQuery, graphql } from 'gatsby'
 import Link from 'gatsby-link'
+import Img from 'gatsby-image'
+
+const Gallery = () => {
+
+  return (
+
+    <StaticQuery 
+      query={graphql `
+      query ProjectIndexQuery {
+          allMarkdownRemark {
+            edges {
+              node {
+                id
+                frontmatter {
+                  path
+                  title
+                  date
+                  author
+                  featureImage {
+                    childImageSharp {
+                      fluid(maxWidth: 800) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                  caption
+                  description
+                }
+              }
+            }
+          }    
+      }
+    `}
+    render={data => (
+      <div>
+        <div class="row">
+          {data.allMarkdownRemark.edges.map((post,i) => {
+            return(
+              <GalleryItem
+                id={post.node.id}
+                source={post.node.frontmatter.path}
+                thumbnail={post.node.frontmatter.featureImage.childImageSharp.fluid}
+                caption={post.node.frontmatter.caption}
+                description={post.node.frontmatter.description}
+                position={i}
+              />
+            );
+            })}
+        </div>
+
+      </div>
+    )}
+    />
+  )
+}
 
 // const Gallery = ({ images = DEFAULT_IMAGES }) => {
 //   const [lightboxIsOpen, setLightboxIsOpen] = useState(false)
@@ -48,40 +103,5 @@ import Link from 'gatsby-link'
 // Gallery.propTypes = {
 //   images: PropTypes.array,
 // }
-
-const Gallery = () => {
-
-  return (
-
-    <StaticQuery 
-      query={graphql `
-      query ProjectIndexQuery {
-          allMarkdownRemark {
-            edges {
-              node {
-                id
-                frontmatter {
-                  path
-                  title
-                  date
-                  author
-                }
-              }
-            }
-          }    
-      }
-    `}
-      render={data => (
-        <div>
-        {data.allMarkdownRemark.edges.map(post => (
-          <div key={post.node.id}>
-            <Link to={post.node.frontmatter.path}><h3>{post.node.frontmatter.title}</h3></Link>
-          </div>
-        ))}
-      </div>
-      )}
-    />
-  )
-}
 
 export default Gallery
