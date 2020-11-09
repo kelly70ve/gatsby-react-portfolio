@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Hunter Chang",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "firebase": "^8.0.1",
     "firebase-admin": "^9.3.0",
     "gatsby": "^2.20.12",

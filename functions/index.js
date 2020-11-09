@@ -1,37 +1,30 @@
-const functions = require('firebase-functions');
+const functions = require('firebase-functions')
 const admin = require('firebase-admin');
 const nodemailer = require('nodemailer');
+admin.initializeApp()
+require('dotenv').config()
 
-//Initializing Firebase Admin SDK
-admin.initializeApp();
+const { SENDER_EMAIL, SENDER_PASSWORD } = process.env;
 
-//Creating Nodemailer transporter using your Mailtrap SMTP details
-var transporter = nodemailer.createTransport({
-  host: "smtp.mailtrap.io",
-  port: 2525,
-  auth: {
-    user: "ab7debcec1261a",
-    pass: "2b1b1011d00d88"
-  }
-});
+exports.sendEmailNotification = functions.firestore.document('contacts/{id}')
+  .onCreate((snap, ctx) => {
+    const data = snap.data();
+    let transporter = nodemailer.createTransport({
+      service:'gmail',
+      host:'smtp.gmail.com',
+      port:456,
+      secure:true,
+      auth: {
+        user: SENDER_EMAIL,
+        pass: SENDER_PASSWORD
+      }
+    }) 
+    transporter.sendMail({
+      from: SENDER_EMAIL,
+      to: `${data.email}`,
+      subject: 'Your submission Info',
+      text: `${data.email}`,
+      html: `${data.email}`,
+    }).then(res => console.log('successfully sent that mail')).catch(err => console.log(err));
 
-//Creating a Firebase Cloud Function
-exports.emailSender = functions.https.onRequest((req, res) => {
-
-  //Defining mailOptions
-  const mailOptions = {
-    from: 'alfo.opidi85@gmail.com', //Adding sender's email
-    to: req.query.dest, //Getting recipient's email by query string
-    subject: 'Email Sent via Firebase', //Email subject
-    html: '<b>Sending emails with Firebase is easy!</b>' //Email content in HTML
-  };
-
-  //Returning result
-  return transporter.sendMail(mailOptions, (err, info) => {
-    if (err) {
-      return console.log(err.toString());
-    }
-    return res.send('Email sent succesfully');
   });
-
-});
