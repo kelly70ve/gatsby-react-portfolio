@@ -1,16 +1,29 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 
 export default function Template ({data}) {
   const post = data.markdownRemark
-  
+  const style = {
+    display: "flex",
+    justifyContent: "space-between"
+  }
+
   return(
-    <div>
+    <Layout>
+      <div id="main">
       <Link to="/">Go Back</Link>
-      <h1>{post.frontmatter.title}</h1>
+      <div style={style}>
+        <h1>{post.frontmatter.title}</h1>
+        <div>
+        <a href={post.frontmatter.deployedApp} target="_blank">Deployed App</a> | <a href={post.frontmatter.github} target="_blank">GitHub</a>
+        </div>
+      </div>
+      <p>{post.frontmatter.description}</p>
       <div dangerouslySetInnerHTML={{ __html: post.html}}/>
-    </div>
+      </div>
+    </Layout>
   )
 }
 
@@ -21,8 +34,9 @@ export const postQuery = graphql`
       frontmatter {
         path
         title
-        author
-        date
+        description
+        deployedApp
+        github
       }
     }
   }
