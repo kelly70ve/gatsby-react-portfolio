@@ -21,7 +21,6 @@ const Gallery = () => {
                 frontmatter {
                   path
                   title
-                  date
                   author
                   featureImage {
                     childImageSharp {
