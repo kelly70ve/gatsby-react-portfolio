@@ -22,6 +22,7 @@ const Gallery = () => {
                   path
                   title
                   author
+                  position
                   featureImage {
                     childImageSharp {
                       fluid(maxWidth: 800) {
@@ -40,7 +41,11 @@ const Gallery = () => {
     render={data => (
       <div>
         <div class="row">
-          {data.allMarkdownRemark.edges.map((post,i) => {
+          {data.allMarkdownRemark.edges
+          .sort((a, b) => {
+            return a.node.frontmatter.position - b.node.frontmatter.position
+          })
+          .map((post) => {
             return(
               <GalleryItem
                 id={post.node.id}
@@ -48,7 +53,7 @@ const Gallery = () => {
                 thumbnail={post.node.frontmatter.featureImage.childImageSharp.fluid}
                 caption={post.node.frontmatter.caption}
                 description={post.node.frontmatter.description}
-                position={i}
+                position={post.node.frontmatter.position}
               />
             );
             })}
