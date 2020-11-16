@@ -6,6 +6,7 @@ caption: "seeFood"
 description: "Recipe generator for ingredients you already have in your kitchen."
 deployedApp: "https://goodbyetonto.github.io/first-project/"
 github: "https://github.com/goodbyetonto/first-project"
+position: 1
 ---
 ## App Preview 
 
@@ -38,11 +39,9 @@ This application features dynamically updated HTML and CSS through jQuery/JavaSc
 - I want to be able to find recipes based on what I have in my fridge & pantry
 - So that I can cook better to impress my friends and loved ones
 
----
+## Contributors
 
-## Creators: 
-
-- [Garrett Trask](https://goodbyetonto.github.io/Portfolio)
-- [Kelly Gowing](https://kelly70ve.github.io/)
-- [Rocky Salerno](https://rrsalerno21.github.io/)
+- <a href="https://goodbyetonto.github.io/Portfolio" target="_blank">Garrett Trask</a>
+- <a href="https://kelly70ve.github.io/" target="_blank">Kelly Gowing</a>
+- <a href="https://rrsalerno21.github.io/" target="_blank">Rocky Salerno</a>
 

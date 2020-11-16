@@ -21,7 +21,7 @@ position: 0
 Armonia has introduced a new chat and service app, which will help limit the amount of face to face interactions for staff, while still providing guests with excellent and safe service.
 
 
-The deployed project can be viewed [here](https://cobramon.herokuapp.com/signup). The project is responsive and can be viewed on mobile, tablet or desktop.
+The deployed project can be viewed <a href="https://cobramon.herokuapp.com/signup" target="_blank">here</a> The project is responsive and can be viewed on mobile, tablet or desktop.
 
 ![User Flow](./userFlow.png)
 
@@ -31,12 +31,10 @@ The deployed project can be viewed [here](https://cobramon.herokuapp.com/signup)
 
 ![Future Development](./futureDevelopment.png)
 
----
+## Contributors
 
-## Creators: 
-
-- [Garrett Trask](https://goodbyetonto.github.io/Portfolio)
-- [Kelly Gowing](https://kelly70ve.github.io/)
-- [Nick Kim](https://github.com/nbkim89)
-- [Rocky Salerno](https://rrsalerno21.github.io/)
+- <a href="https://goodbyetonto.github.io/Portfolio" target="_blank">Garrett Trask</a>
+- <a href="https://kelly70ve.github.io/" target="_blank">Kelly Gowing</a>
+- <a href="https://github.com/nbkim89" target="_blank">Nick Kim</a>
+- <a href="https://rrsalerno21.github.io/" target="_blank">Rocky Salerno</a>
 
