@@ -3,7 +3,7 @@ path: "/seefood"
 title: "seeFood"
 featureImage: ./seeFoodThumbnail.png
 caption: "seeFood"
-description: "Recipe generator for ingredients you already have in your kitchen."
+description: "Recipe generator for ingredients you already have in your kitchen"
 deployedApp: "https://goodbyetonto.github.io/first-project/"
 github: "https://github.com/goodbyetonto/first-project"
 position: 1
