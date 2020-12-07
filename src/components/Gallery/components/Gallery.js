@@ -40,7 +40,7 @@ const Gallery = () => {
     `}
     render={data => (
       <div>
-        <div class="row">
+        <div className="row">
           {data.allMarkdownRemark.edges
           .sort((a, b) => {
             return a.node.frontmatter.position - b.node.frontmatter.position
@@ -48,6 +48,7 @@ const Gallery = () => {
           .map((post) => {
             return(
               <GalleryItem
+                key={post.node.id}
                 id={post.node.id}
                 source={post.node.frontmatter.path}
                 thumbnail={post.node.frontmatter.featureImage.childImageSharp.fluid}
