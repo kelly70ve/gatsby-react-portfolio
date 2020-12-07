@@ -14,6 +14,7 @@ const HomeIndex = () => {
       <Helmet>
         <title>{siteTitle}</title>
         <meta name="description" content={siteDescription} />
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
       </Helmet>
 
       <div id="main">

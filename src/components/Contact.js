@@ -1,30 +1,50 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { db } from './firebase'
+import Recaptcha from 'react-recaptcha'
 
 const Contact = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
+  const [isVerified, setIsVerified] = useState("")
+
+  useEffect(() => {
+      setIsVerified(false)
+  }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    db.collection('contacts').add({
-      name: name,
-      email: email,
-      message: message
-    })
-    .then(() => {
-      alert('Message has been submitted')
-    })
-    .catch((error) => {
-      alert(error.message)
-      alert('Something went wrong, please try again')
-    })
+    if (isVerified) {
+      db.collection('contacts').add({
+        name: name,
+        email: email,
+        message: message
+      })
+      .then(() => {
+        alert('Message has been submitted')
+      })
+      .catch((error) => {
+        alert('Something went wrong, please try again')
+      })
 
-    setName("")
-    setEmail("")
-    setMessage("")
+      setName("")
+      setEmail("")
+      setMessage("")
+    } else {
+      alert('Please verify if you are human!')
+    }
+
+  }
+
+  const recaptchaLoaded = () => {
+    console.log("captcha successfully loaded")
+  }
+
+  const verifyCallback = (response) => {
+    if (response) {
+      setIsVerified(true)
+    }
   }
 
   return (
@@ -64,6 +84,14 @@ const Contact = () => {
                   onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
               </div>
+            </div>
+            <div style={{ marginTop: 30 }}>
+              <Recaptcha
+                sitekey="6LdeZvwZAAAAAMnuvYT5HBO-qfBNwfXzuSFpXZ_N"
+                render="explicit"
+                verifyCallback={verifyCallback}
+                onloadCallback={recaptchaLoaded}
+              />
             </div>
             <ul className="actions" style={{ marginTop: 30 }}>
               <li>
