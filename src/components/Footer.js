@@ -1,34 +1,29 @@
 import React from 'react'
+import resume from '../assets/resume.pdf'
 
 const Footer = () => (
   <div id="footer">
     <div className="inner">
       <ul className="icons">
         <li>
-          <a href="#" className="icon fa-twitter">
-            <span className="label">Twitter</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" className="icon fa-github">
+          <a href="https://github.com/kelly70ve" className="icon fa-github" target="_blank">
             <span className="label">Github</span>
           </a>
         </li>
         <li>
-          <a href="#" className="icon fa-dribbble">
-            <span className="label">Dribbble</span>
+          <a href="https://www.linkedin.com/in/kellygowing" className="icon fa-linkedin" target="_blank">
+            <span className="label">LinkedIn</span>
           </a>
         </li>
         <li>
-          <a href="#" className="icon fa-envelope-o">
+          <a href="mailto:kelly.a.gowing@gmail.com" className="icon fa-envelope-o">
             <span className="label">Email</span>
           </a>
         </li>
-      </ul>
-      <ul className="copyright">
-        <li>&copy; Gatsby Starter Strata</li>
         <li>
-          Design: <a href="http://html5up.net">HTML5 UP</a>
+          <a href={resume} className="icon fa-file"  target="_blank">
+            <span className="label">Resume</span>
+          </a>
         </li>
       </ul>
     </div>
