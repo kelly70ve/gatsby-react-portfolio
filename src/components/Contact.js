@@ -16,21 +16,27 @@ const Contact = () => {
     e.preventDefault();
 
     if (isVerified) {
-      db.collection('contacts').add({
-        name: name,
-        email: email,
-        message: message
-      })
-      .then(() => {
-        alert('Message has been submitted')
-      })
-      .catch((error) => {
-        alert('Something went wrong, please try again')
-      })
+      if (!name || !email || !message) {
+        alert('Please fill out all form fields')
+      } else {
+        db.collection('contacts').add({
+          name: name,
+          email: email,
+          message: message
+        })
+        .then(() => {
+          alert('Message has been submitted')
+        })
+        .catch((error) => {
+          alert('Something went wrong, please try again')
+        })
 
-      setName("")
-      setEmail("")
-      setMessage("")
+        setName("")
+        setEmail("")
+        setMessage("")
+      }
+
+
     } else {
       alert('Please verify if you are human!')
     }
