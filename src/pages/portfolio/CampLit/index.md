@@ -5,11 +5,10 @@ author: "Kelly"
 featureImage: ./campLit.png
 caption: "CampLit"
 description: "Flashcard app, modeled after Quizlet.com"
+deployedApp: "https://camplit.herokuapp.com/"
+github: "https://github.com/kelly70ve/Project-2"
 position: 2
 ---
-
-# CampLit
-
 
 ## App Preview 
 
@@ -21,7 +20,7 @@ position: 2
 
 Having used many other applications for studying such as quizlet, our group decided to come up with a way that we can streamline studying. With the virtual flashcards users are able to customize the information to fit their studying needs.
 
-This project has been completed with no known bugs and can be viewed [here](https://camplit.herokuapp.com/). The project is responsive and can be viewed on mobile, tablet or desktop.
+This project has been completed with no known bugs and can be viewed <a href="https://camplit.herokuapp.com/" target="_blank">here</a>. The project is responsive and can be viewed on mobile, tablet or desktop.
 
 
 
