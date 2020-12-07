@@ -26,11 +26,10 @@ GalleryItem.displayName = 'GalleryItem'
 GalleryItem.propTypes = {
   id: PropTypes.string.isRequired,
   source: PropTypes.string.isRequired,
-  thumbnail: PropTypes.string.isRequired,
+  thumbnail: PropTypes.object.isRequired,
   caption: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  position: PropTypes.string.isRequired,
-  toggleLightbox: PropTypes.func.isRequired
+  position: PropTypes.number.isRequired,
 }
 
 export default GalleryItem
