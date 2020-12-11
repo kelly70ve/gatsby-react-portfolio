@@ -4,14 +4,22 @@ import Helmet from 'react-helmet'
 import Gallery from '../components/Gallery'
 import Layout from '../components/layout'
 import Contact from '../components/Contact'
+import favicon from "../assets/images/website-icon.png"
 
 const HomeIndex = () => {
-  const siteTitle = 'Gatsby Starter - Strata'
-  const siteDescription = 'Site description'
-
+  const siteTitle = 'Kelly Gowing - Full-Stack Developer'
+  const siteDescription = 'Web Devlopment portfolio by Kelly Gowing, using Gatsby Starter - Strata'
+  const faviconLink = {
+    rel: "icon",
+    type: "image/png",
+    sizes:"40x40",
+    href:favicon
+  }
   return (
     <Layout>
-      <Helmet>
+      <Helmet link={[
+      { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }
+  ]}>
         <title>{siteTitle}</title>
         <meta name="description" content={siteDescription} />
         {/* fontawesome */}
