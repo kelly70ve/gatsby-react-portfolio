@@ -3,7 +3,7 @@ path: "/weather-dashboard"
 title: "Weather Dashboard"
 featureImage: ./weatherThumbnail.png
 caption: "Weather Dashboard"
-description: "Rectrieve weather data for different cities"
+description: "Retrieve weather forecasts for different cities"
 deployedApp: "https://kelly70ve.github.io/WeatherApp/"
 github: "https://github.com/kelly70ve/WeatherApp"
 position: 3
