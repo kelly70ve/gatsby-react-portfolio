@@ -470,11 +470,11 @@
 			&:after {
 				@include vendor('transition', 'opacity #{_duration(transition)} ease-in-out');
 				border-radius: _size(border-radius);
-				border: solid 3px rgba(255,255,255,0.5);
+				background-color: #0F4C81E6;
 				color: #fff;
 				content: 'View';
 				display: inline-block;
-				font-size: 0.8em;
+				font-size: 1em;
 				font-weight: _font(weight-bold);
 				left: 50%;
 				line-height: 2.25em;
