@@ -59,13 +59,13 @@ const HomeIndex = () => {
 
           <Gallery />
 
-          <ul className="actions">
+          {/* <ul className="actions">
             <li>
               <a href="#" className="button">
                 Full Portfolio
               </a>
             </li>
-          </ul>
+          </ul> */}
         </section>
 
         <Contact/>
