@@ -48,13 +48,13 @@ const HomeIndex = () => {
               </tr>
             </tbody>
           </table>
-          <ul className="actions">
+          {/* <ul className="actions">
             <li>
               <a href="#worktogether" className="button">
                 Let's Work Together!
               </a>
             </li>
-          </ul>
+          </ul> */}
         </section>
 
         <section id="two">
