@@ -9,12 +9,7 @@ import favicon from "../assets/images/website-icon.png"
 const HomeIndex = () => {
   const siteTitle = 'Kelly Gowing - Full-Stack Developer'
   const siteDescription = 'Web Devlopment portfolio by Kelly Gowing, using Gatsby Starter - Strata'
-  const faviconLink = {
-    rel: "icon",
-    type: "image/png",
-    sizes:"40x40",
-    href:favicon
-  }
+
   return (
     <Layout>
       <Helmet link={[

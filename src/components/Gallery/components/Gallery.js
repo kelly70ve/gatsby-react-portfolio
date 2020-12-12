@@ -1,11 +1,6 @@
-import React, { useState, useCallback } from 'react'
-import PropTypes from 'prop-types'
-import Carousel, { Modal, ModalGateway } from 'react-images'
+import React from 'react'
 import GalleryItem from './GalleryItem'
-import { DEFAULT_IMAGES } from '../constants/defaultImages'
 import { StaticQuery, graphql } from 'gatsby'
-import Link from 'gatsby-link'
-import Img from 'gatsby-image'
 
 const Gallery = () => {
 
