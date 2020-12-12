@@ -17,7 +17,7 @@ export default function Template ({data}) {
       <div style={style}>
         <h1>{post.frontmatter.title}</h1>
         <div>
-        <a href={post.frontmatter.deployedApp} target="_blank">Deployed App</a> | <a href={post.frontmatter.github} target="_blank">GitHub</a>
+        <a href={post.frontmatter.deployedApp} target="_blank" rel="noreferrer">Deployed App</a> | <a href={post.frontmatter.github} target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </div>
       <p>{post.frontmatter.description}</p>

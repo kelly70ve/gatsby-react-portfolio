@@ -6,12 +6,12 @@ const Footer = () => (
     <div className="inner">
       <ul className="icons">
         <li>
-          <a href="https://github.com/kelly70ve" className="icon fa-github" target="_blank">
+          <a href="https://github.com/kelly70ve" className="icon fa-github" target="_blank" rel="noreferrer">
             <span className="label">Github</span>
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/kellygowing" className="icon fa-linkedin" target="_blank">
+          <a href="https://www.linkedin.com/in/kellygowing" className="icon fa-linkedin" target="_blank" rel="noreferrer">
             <span className="label">LinkedIn</span>
           </a>
         </li>
@@ -21,7 +21,7 @@ const Footer = () => (
           </a>
         </li>
         <li>
-          <a href={resume} className="icon fa-file"  target="_blank">
+          <a href={resume} className="icon fa-file"  target="_blank" rel="noreferrer">
             <span className="label">Resume</span>
           </a>
         </li>

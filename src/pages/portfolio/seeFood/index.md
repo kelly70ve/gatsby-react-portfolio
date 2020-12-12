@@ -23,13 +23,13 @@ seeFood is an app that can help you answer the dreaded question, “What do you 
 
 Simply enter the ingredients you already have in your kitchen, and seeFood will provide you with recipes using your ingredients.
 
-This project has been completed with no known bugs and can be viewed <a href="https://goodbyetonto.github.io/first-project/" target="_blank">here</a>. The project is responsive and can be viewed on mobile, tablet or desktop.
+This project has been completed with no known bugs and can be viewed <a href="https://goodbyetonto.github.io/first-project/" target="_blank" rel="noreferrer">here</a>. The project is responsive and can be viewed on mobile, tablet or desktop.
 
 
 
 ## Technologies Used 
 
-This application features dynamically updated HTML and CSS through jQuery/JavaScript using the <a href="https://www.themealdb.com/" target="_blank">The Meal DB API</a> to retrieve recipe data.
+This application features dynamically updated HTML and CSS through jQuery/JavaScript using the <a href="https://www.themealdb.com/" target="_blank" rel="noreferrer">The Meal DB API</a> to retrieve recipe data.
 
 
 
@@ -41,7 +41,7 @@ This application features dynamically updated HTML and CSS through jQuery/JavaSc
 
 ## Contributors
 
-- <a href="https://goodbyetonto.github.io/Portfolio" target="_blank">Garrett Trask</a>
-- <a href="https://kelly70ve.github.io/" target="_blank">Kelly Gowing</a>
-- <a href="https://rrsalerno21.github.io/" target="_blank">Rocky Salerno</a>
+- <a href="https://goodbyetonto.github.io/Portfolio" target="_blank" rel="noreferrer">Garrett Trask</a>
+- <a href="https://kelly70ve.github.io/" target="_blank" rel="noreferrer">Kelly Gowing</a>
+- <a href="https://rrsalerno21.github.io/" target="_blank" rel="noreferrer">Rocky Salerno</a>
 

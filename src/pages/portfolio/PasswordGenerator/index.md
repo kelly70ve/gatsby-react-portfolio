@@ -16,7 +16,7 @@ position: 5
 ## About App
 This is an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by JavaScript code.
 
-This project has been completed with no known bugs and can be viewed <a href="https://kelly70ve.github.io/Password_Generator/" target="_blank">here</a>. The project is responsive and can be viewed on mobile, tablet or desktop.
+This project has been completed with no known bugs and can be viewed <a href="https://kelly70ve.github.io/Password_Generator/" target="_blank" rel="noreferrer">here</a>. The project is responsive and can be viewed on mobile, tablet or desktop.
 
 ## Project Goals:
 

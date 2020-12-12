@@ -19,7 +19,7 @@ position: 4
 
 This application is a simple to do app. Users will be able to add, complete, and delete to dos. 
 
-This application is deployed on <a href="https://kelly-todo-app.herokuapp.com/" target="_blank">Heroku</a>
+This application is deployed on <a href="https://kelly-todo-app.herokuapp.com/" target="_blank" rel="noreferrer">Heroku</a>
 
 
 ### User Story
