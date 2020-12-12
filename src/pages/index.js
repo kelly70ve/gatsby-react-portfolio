@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 
 import Gallery from '../components/Gallery'
 import Layout from '../components/layout'
-import Contact from '../components/Contact'
+// import Contact from '../components/Contact'
 import favicon from "../assets/images/website-icon.png"
 
 const HomeIndex = () => {
@@ -71,7 +71,7 @@ const HomeIndex = () => {
           </ul> */}
         </section>
 
-        <Contact/>
+        {/* <Contact/> */}
         
       </div>
     </Layout>
