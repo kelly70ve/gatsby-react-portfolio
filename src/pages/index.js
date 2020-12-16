@@ -5,6 +5,7 @@ import Gallery from '../components/Gallery'
 import Layout from '../components/layout'
 // import Contact from '../components/Contact'
 import favicon from "../assets/images/website-icon.png"
+import MyForm from '../components/MyForm'
 
 const HomeIndex = () => {
   const siteTitle = 'Kelly Gowing - Full-Stack Developer'
@@ -48,13 +49,13 @@ const HomeIndex = () => {
               </tr>
             </tbody>
           </table>
-          {/* <ul className="actions">
+          <ul className="actions">
             <li>
               <a href="#worktogether" className="button">
                 Let's Work Together!
               </a>
             </li>
-          </ul> */}
+          </ul>
         </section>
 
         <section id="two">
@@ -71,7 +72,7 @@ const HomeIndex = () => {
           </ul> */}
         </section>
 
-        {/* <Contact/> */}
+        <MyForm/>
         
       </div>
     </Layout>
