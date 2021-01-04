@@ -10,10 +10,7 @@ position: 1
 ---
 ## App Preview 
 
-
-![seeFood Preview](./seeFood.gif)
-
-
+<img src="./seeFood.gif" class="gif"/>
 
 ## About App
 

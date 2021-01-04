@@ -12,8 +12,7 @@ position: 2
 
 ## App Preview 
 
-
-![CampLit Preview](./campLit.gif)
+<img src="./campLit.gif" class="gif"/>
 
 
 ## About App

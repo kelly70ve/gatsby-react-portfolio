@@ -10,9 +10,7 @@ position: 3
 ---
 ## App Preview 
 
-
-![Weather Dashboard Preview](./weather.gif)
-
+<img src="./weather.gif" class="gif"/>
 
 ## About App
 

@@ -10,10 +10,7 @@ position: 4
 ---
 ## App Preview 
 
-
-![To Do App Preview](./toDo.gif)
-
-
+<img src="./toDo.gif" class="gif"/>
 
 ## Usage
 
