@@ -10,7 +10,7 @@ position: 0
 ---
 ## App Demo
 
-<div class="video">
+<div class="videoWrapper">
 <iframe width="736" height="412" src="https://www.youtube.com/embed/videoseries?list=PLKNZBvvuVbCo_Q0Ww7T7EWyQuFqVHdTDM&autoplay=1&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
