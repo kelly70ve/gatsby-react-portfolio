@@ -953,6 +953,27 @@
 
 /* Skills */
 
+	.skills-container {
+		display: flex;
+		justify-content: space-between;
+		border: solid 1px #efefef;
+    border-left: 0;
+		border-right: 0;
+		background-color: #f7f7f7;
+		padding: .5em 0em;
+		margin-bottom: .5em;
+		flex-flow: wrap;
+	}
+
+	.skills-row {
+		display: flex;
+    justify-content: space-around;
+		width: 50%;
+		@media screen and (max-width: 480px) {
+			width: 100%;
+		}
+	}
+
 	.skills:hover {
 		color: _palette(accent1, bg);
 	}
