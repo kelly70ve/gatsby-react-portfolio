@@ -20,18 +20,6 @@ This project has been completed with no known bugs and can be viewed <a href="ht
 
 ** This is my first attempt at a dark themed app!
 
-### User Story
-```
-AS A user, I want to be able to write and save my tasks
-
-I WANT to be able to delete tasks I've saved before
-
-SO THAT I can organize my thoughts and keep track of tasks I need to complete 
-```
-
-## Future Development 
-Currently, this app is not mobile ready and is best viewed on desktop.
-
 ## Questions? 
 * Please email me if you have any questions at kelly.a.gowing@gmail.com
 * OR visit my <a href="https://github.com/kelly70ve" target="_blank" rel="noreferrer">GitHub</a> 

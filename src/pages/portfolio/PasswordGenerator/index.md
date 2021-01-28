@@ -27,10 +27,6 @@ This project has been completed with no known bugs and can be viewed <a href="ht
 - Once user has entered their password criteria, the generated password will display their password in the results container. 
 - User may click on clipboard button to copy password to their clipboard.
 
-## Project Preview
-
-![Project Preview](./Assets/screenshot.png)
-
 ## Technologies Used
 
 - HTML
