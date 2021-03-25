@@ -95,7 +95,7 @@ const HomeIndex = () => {
 
           <ul className="actions">
             <li>
-              <a href="#" className="button">
+              <a href="/full-portfolio" className="button">
                 Full Portfolio
               </a>
             </li>
