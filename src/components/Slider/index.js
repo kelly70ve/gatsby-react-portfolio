@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
+import Slide from './components/Slide';
 import './slider.css';
 
 export default class SimpleSlider extends Component {
@@ -15,24 +16,12 @@ export default class SimpleSlider extends Component {
       <div>
         <h2>{this.props.name}</h2>
         <Slider {...settings}>
-          <div>
-            <h3 className="slide">1</h3>
-          </div>
-          <div>
-            <h3 className="slide">2</h3>
-          </div>
-          <div>
-            <h3 className="slide">3</h3>
-          </div>
-          <div>
-            <h3 className="slide">4</h3>
-          </div>
-          <div>
-            <h3 className="slide">5</h3>
-          </div>
-          <div>
-            <h3 className="slide">6</h3>
-          </div>
+          <Slide />
+          <Slide />
+          <Slide />
+          <Slide />
+          <Slide />
+          <Slide />
         </Slider>
       </div>
     );
