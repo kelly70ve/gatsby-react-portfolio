@@ -1,9 +1,7 @@
 const path = require('path');
 
-exports.createPages = ({boundActionCreators, graphql}) => {
-  const { createPage } = boundActionCreators 
-  
-  const postTemplate = path.resolve('src/templates/ProjectPost.js');
+exports.createPages = ({ boundActionCreators, graphql }) => {
+  const { createPage } = boundActionCreators;
 
   return graphql(`
     {
@@ -15,21 +13,24 @@ exports.createPages = ({boundActionCreators, graphql}) => {
               path
               title
               author
+              template
             }
           }
         }
       }
     }
-  `).then(res => {
-    if(res.errors) {
-      return Promise.reject(res.errors)
+  `).then((res) => {
+    if (res.errors) {
+      return Promise.reject(res.errors);
     }
 
-    res.data.allMarkdownRemark.edges.forEach(({node}) => {
+    res.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
-        path:node.frontmatter.path,
-        component: postTemplate,
-      })
-    })
-  })
-}
+        path: node.frontmatter.path,
+        component: path.resolve(
+          `src/templates/${node.frontmatter.template}.js`
+        ),
+      });
+    });
+  });
+};
