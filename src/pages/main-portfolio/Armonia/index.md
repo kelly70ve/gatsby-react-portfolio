@@ -8,6 +8,7 @@ deployedApp: 'https://cobramon.herokuapp.com/signup'
 github: 'https://github.com/goodbyetonto/cobramon'
 position: 0
 template: 'ProjectPost'
+postType: 'web-development'
 ---
 
 ## App Demo

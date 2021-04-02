@@ -9,6 +9,7 @@ deployedApp: 'https://camplit.herokuapp.com/'
 github: 'https://github.com/kelly70ve/Project-2'
 position: 2
 template: 'ProjectPost'
+postType: 'web-development'
 ---
 
 ## App Preview

@@ -8,6 +8,7 @@ deployedApp: 'https://kelly-todo-app.herokuapp.com/'
 github: 'https://github.com/kelly70ve/to-do-app'
 position: 4
 template: 'ProjectPost'
+postType: 'web-development'
 ---
 
 ## App Preview

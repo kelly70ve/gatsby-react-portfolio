@@ -8,6 +8,7 @@ deployedApp: 'https://kelly70ve.github.io/WeatherApp/'
 github: 'https://github.com/kelly70ve/WeatherApp'
 position: 3
 template: 'ProjectPost'
+postType: 'web-development'
 ---
 
 ## App Preview

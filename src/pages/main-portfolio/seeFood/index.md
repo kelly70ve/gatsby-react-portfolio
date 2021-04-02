@@ -8,6 +8,7 @@ deployedApp: 'https://goodbyetonto.github.io/first-project/'
 github: 'https://github.com/goodbyetonto/first-project'
 position: 1
 template: 'ProjectPost'
+postType: 'web-development'
 ---
 
 ## App Preview

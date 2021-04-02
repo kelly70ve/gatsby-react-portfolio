@@ -8,6 +8,7 @@ deployedApp: 'https://kelly70ve.github.io/Password_Generator/'
 github: 'https://github.com/kelly70ve/WeatherApp'
 position: 5
 template: 'ProjectPost'
+postType: 'web-development'
 ---
 
 ## App Preview

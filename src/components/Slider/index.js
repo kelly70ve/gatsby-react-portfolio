@@ -13,6 +13,7 @@ export default class SimpleSlider extends Component {
       slidesToShow: 3,
       slidesToScroll: 3,
     };
+    const type = this.props.type;
     return (
       <div>
         <h2>{this.props.name}</h2>
@@ -39,6 +40,7 @@ export default class SimpleSlider extends Component {
                       }
                       caption
                       description
+                      postType
                     }
                   }
                 }
@@ -48,19 +50,23 @@ export default class SimpleSlider extends Component {
           render={(data) => (
             <Slider {...settings}>
               {data.allMarkdownRemark.edges.map((post) => {
-                return (
-                  <Slide
-                    key={post.node.id}
-                    id={post.node.id}
-                    source={post.node.frontmatter.path}
-                    thumbnail={
-                      post.node.frontmatter.featureImage.childImageSharp.fluid
-                    }
-                    caption={post.node.frontmatter.caption}
-                    description={post.node.frontmatter.description}
-                    position={post.node.frontmatter.position}
-                  />
-                );
+                if (post.node.frontmatter.postType === type) {
+                  return (
+                    <Slide
+                      key={post.node.id}
+                      id={post.node.id}
+                      source={post.node.frontmatter.path}
+                      thumbnail={
+                        post.node.frontmatter.featureImage.childImageSharp.fluid
+                      }
+                      caption={post.node.frontmatter.caption}
+                      description={post.node.frontmatter.description}
+                      position={post.node.frontmatter.position}
+                    />
+                  );
+                } else {
+                  return;
+                }
               })}
             </Slider>
           )}
