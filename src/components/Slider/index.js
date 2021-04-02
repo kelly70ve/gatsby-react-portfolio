@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Slider from 'react-slick';
 import Slide from './components/Slide';
 import './slider.css';
+import { StaticQuery, graphql } from 'gatsby';
 
 export default class SimpleSlider extends Component {
   render() {
@@ -15,14 +16,55 @@ export default class SimpleSlider extends Component {
     return (
       <div>
         <h2>{this.props.name}</h2>
-        <Slider {...settings}>
-          <Slide />
-          <Slide />
-          <Slide />
-          <Slide />
-          <Slide />
-          <Slide />
-        </Slider>
+        <StaticQuery
+          query={graphql`
+            query ProjectQuery {
+              allMarkdownRemark(
+                filter: { fileAbsolutePath: { regex: "/main-portfolio/" } }
+              ) {
+                edges {
+                  node {
+                    id
+                    frontmatter {
+                      path
+                      title
+                      author
+                      position
+                      featureImage {
+                        childImageSharp {
+                          fluid(maxWidth: 800) {
+                            ...GatsbyImageSharpFluid
+                          }
+                        }
+                      }
+                      caption
+                      description
+                    }
+                  }
+                }
+              }
+            }
+          `}
+          render={(data) => (
+            <Slider {...settings}>
+              {data.allMarkdownRemark.edges.map((post) => {
+                return (
+                  <Slide
+                    key={post.node.id}
+                    id={post.node.id}
+                    source={post.node.frontmatter.path}
+                    thumbnail={
+                      post.node.frontmatter.featureImage.childImageSharp.fluid
+                    }
+                    caption={post.node.frontmatter.caption}
+                    description={post.node.frontmatter.description}
+                    position={post.node.frontmatter.position}
+                  />
+                );
+              })}
+            </Slider>
+          )}
+        />
       </div>
     );
   }

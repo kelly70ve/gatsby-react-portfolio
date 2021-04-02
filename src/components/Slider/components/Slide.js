@@ -1,10 +1,11 @@
 import React from 'react';
+import Img from 'gatsby-image';
 
-const Slide = () => {
+const Slide = ({ id, source, thumbnail, caption, description }) => {
   return (
-    <div>
-      <h3 className="slide">1</h3>
-    </div>
+    <a key={id} className="image fit thumb" href={source}>
+      <Img fluid={thumbnail} />
+    </a>
   );
 };
 
