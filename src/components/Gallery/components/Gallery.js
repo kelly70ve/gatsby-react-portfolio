@@ -1,15 +1,15 @@
-import React from 'react'
-import GalleryItem from './GalleryItem'
-import { StaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import GalleryItem from './GalleryItem';
+import { StaticQuery, graphql } from 'gatsby';
 
 const Gallery = () => {
-
   return (
-
-    <StaticQuery 
-      query={graphql `
-      query ProjectIndexQuery {
-          allMarkdownRemark {
+    <StaticQuery
+      query={graphql`
+        query ProjectIndexQuery {
+          allMarkdownRemark(
+            filter: { fileAbsolutePath: { regex: "/main-portfolio/" } }
+          ) {
             edges {
               node {
                 id
@@ -30,36 +30,39 @@ const Gallery = () => {
                 }
               }
             }
-          }    
-      }
-    `}
-    render={data => (
-      <div>
-        <div className="row">
-          {data.allMarkdownRemark.edges
-          .sort((a, b) => {
-            return a.node.frontmatter.position - b.node.frontmatter.position
-          })
-          .map((post) => {
-            return(
-              <GalleryItem
-                key={post.node.id}
-                id={post.node.id}
-                source={post.node.frontmatter.path}
-                thumbnail={post.node.frontmatter.featureImage.childImageSharp.fluid}
-                caption={post.node.frontmatter.caption}
-                description={post.node.frontmatter.description}
-                position={post.node.frontmatter.position}
-              />
-            );
-            })}
+          }
+        }
+      `}
+      render={(data) => (
+        <div>
+          <div className="row">
+            {data.allMarkdownRemark.edges
+              .sort((a, b) => {
+                return (
+                  a.node.frontmatter.position - b.node.frontmatter.position
+                );
+              })
+              .map((post) => {
+                return (
+                  <GalleryItem
+                    key={post.node.id}
+                    id={post.node.id}
+                    source={post.node.frontmatter.path}
+                    thumbnail={
+                      post.node.frontmatter.featureImage.childImageSharp.fluid
+                    }
+                    caption={post.node.frontmatter.caption}
+                    description={post.node.frontmatter.description}
+                    position={post.node.frontmatter.position}
+                  />
+                );
+              })}
+          </div>
         </div>
-
-      </div>
-    )}
+      )}
     />
-  )
-}
+  );
+};
 
 // const Gallery = ({ images = DEFAULT_IMAGES }) => {
 //   const [lightboxIsOpen, setLightboxIsOpen] = useState(false)
@@ -84,7 +87,7 @@ const Gallery = () => {
 //           toggleLightbox={obj.toggleLightbox}
 //           position={i}
 //           toggleLightbox={toggleLightbox}
-//         />); 
+//         />);
 //         })}
 //         </div>
 //       )}
@@ -104,4 +107,4 @@ const Gallery = () => {
 //   images: PropTypes.array,
 // }
 
-export default Gallery
+export default Gallery;
