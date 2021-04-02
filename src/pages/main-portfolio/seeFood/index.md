@@ -1,14 +1,16 @@
 ---
-path: "/seefood"
-title: "seeFood"
+path: '/seefood'
+title: 'seeFood'
 featureImage: ./seeFoodThumbnail.png
-caption: "seeFood"
-description: "Recipe generator for ingredients you already have in your kitchen"
-deployedApp: "https://goodbyetonto.github.io/first-project/"
-github: "https://github.com/goodbyetonto/first-project"
+caption: 'seeFood'
+description: 'Recipe generator for ingredients you already have in your kitchen'
+deployedApp: 'https://goodbyetonto.github.io/first-project/'
+github: 'https://github.com/goodbyetonto/first-project'
 position: 1
+template: 'ProjectPost'
 ---
-## App Preview 
+
+## App Preview
 
 <img src="./seeFood.gif" class="gif"/>
 
@@ -22,13 +24,9 @@ Simply enter the ingredients you already have in your kitchen, and seeFood will 
 
 This project has been completed with no known bugs and can be viewed <a href="https://goodbyetonto.github.io/first-project/" target="_blank" rel="noreferrer">here</a>. The project is responsive and can be viewed on mobile, tablet or desktop.
 
-
-
-## Technologies Used 
+## Technologies Used
 
 This application features dynamically updated HTML and CSS through jQuery/JavaScript using the <a href="https://www.themealdb.com/" target="_blank" rel="noreferrer">The Meal DB API</a> to retrieve recipe data.
-
-
 
 ## User Story
 
@@ -41,4 +39,3 @@ This application features dynamically updated HTML and CSS through jQuery/JavaSc
 - <a href="https://goodbyetonto.github.io/Portfolio" target="_blank" rel="noreferrer">Garrett Trask</a>
 - <a href="https://kelly70ve.github.io/" target="_blank" rel="noreferrer">Kelly Gowing</a>
 - <a href="https://rrsalerno21.github.io/" target="_blank" rel="noreferrer">Rocky Salerno</a>
-
