@@ -31,6 +31,8 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
     "react-images": "^1.0.0",
+    "react-photo-gallery": "^8.0.0",
+    "react-photo-masonry": "^8.0.0",
     "react-recaptcha": "^2.3.10",
     "react-slick": "^0.28.1",
     "slick-carousel": "^1.8.1"
