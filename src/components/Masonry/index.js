@@ -5,6 +5,6 @@ import { photos } from './photos';
 /* popout the browser and maximize to see more columns! -> */
 export default class Masonry extends Component {
   render() {
-    return <Gallery photos={photos} direction={'column'} />;
+    return <Gallery photos={this.props.photos} direction={'column'} />;
   }
 }

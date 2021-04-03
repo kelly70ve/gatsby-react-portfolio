@@ -14,7 +14,7 @@ export default function Template({ data }) {
   return (
     <Layout>
       <div id="main">
-        <Masonry />
+        <Masonry photos={post.frontmatter.photos} />
       </div>
     </Layout>
   );
@@ -30,6 +30,11 @@ export const postQuery = graphql`
         description
         deployedApp
         github
+        photos {
+          src
+          height
+          width
+        }
       }
     }
   }
