@@ -20,9 +20,7 @@ export default class SimpleSlider extends Component {
         <StaticQuery
           query={graphql`
             query ProjectQuery {
-              allMarkdownRemark(
-                filter: { fileAbsolutePath: { regex: "/main-portfolio/" } }
-              ) {
+              allMarkdownRemark {
                 edges {
                   node {
                     id
